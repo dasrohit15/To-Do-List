@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Tasks</title>
+    <link rel="stylesheet" href="style1.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>✨ My Tasks</h1>
+        <p>Stay organized and get things done</p>
+      </header>
+
+      <div class="task-controls">
+        <button id="addTaskBtn">+ Add New Task</button>
+      </div>
+
+      <!-- Tabs -->
+      <div class="tabs">
+        <button class="tab active" data-filter="all">
+          All Tasks <span id="allCount">0</span>
+        </button>
+        <button class="tab" data-filter="active">
+          Active <span id="activeCount">0</span>
+        </button>
+        <button class="tab" data-filter="completed">
+          Completed <span id="completedCount">0</span>
+        </button>
+      </div>
+
+      <!-- Task List -->
+      <ul id="taskList" class="task-list"></ul>
+    </div>
+
+    <!-- Modal for Adding/Editing Task -->
+    <div id="taskModal" class="modal">
+      <div class="modal-content">
+        <h2 id="modalTitle">Add New Task</h2>
+        <label>Title</label>
+        <input type="text" id="taskTitle" placeholder="Enter task title" />
+
+        <label>Description</label>
+        <textarea
+          id="taskDescription"
+          placeholder="Enter task description"
+        ></textarea>
+
+        <label>Priority</label>
+        <select id="taskPriority">
+          <option value="high">High</option>
+          <option value="medium">Medium</option>
+          <option value="low">Low</option>
+        </select>
+
+        <label>Due Date</label>
+        <input type="date" id="taskDate" />
+
+        <div class="modal-buttons">
+          <button id="saveTaskBtn">Save</button>
+          <button id="cancelBtn" class="cancel">Cancel</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
